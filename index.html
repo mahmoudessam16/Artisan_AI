@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtisanAI - Professional AI Image Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="home">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo">ArtisanAI</div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="hero">
+          <h1>Create Stunning AI Art</h1>
+          <p>
+            Transform your imagination into breathtaking visuals with our
+            cutting-edge AI image generation technology. Professional quality,
+            unlimited creativity.
+          </p>
+        </section>
+
+        <section class="generator-interface">
+          <div class="prompt-section">
+            <h2>✨ Describe Your Vision</h2>
+            <textarea
+              class="prompt-textarea"
+              id="promptInput"
+              placeholder="Describe the image you want to create... Be as detailed as possible. For example: 'A majestic dragon soaring through purple clouds at sunset, digital art, highly detailed, 4K resolution, fantasy style'"
+            ></textarea>
+
+            <div style="margin-top: 20px">
+              <button class="generate-btn" id="generateBtn">
+                <span id="btnText">Generate Masterpiece</span>
+              </button>
+            </div>
+
+            <p class="note">Look below to see your creations ⬇</p>
+          </div>
+
+          <div class="settings-panel">
+            <h3>🎛️ Advanced Settings</h3>
+
+            <div class="setting-group">
+              <label for="styleSelect">Art Style</label>
+              <select id="styleSelect">
+                <option value="realistic">Photorealistic</option>
+                <option value="digital-art">Digital Art</option>
+                <option value="oil-painting">Oil Painting</option>
+                <option value="watercolor">Watercolor</option>
+                <option value="anime">Anime/Manga</option>
+                <option value="concept-art">Concept Art</option>
+                <option value="abstract">Abstract</option>
+                <option value="cyberpunk">Cyberpunk</option>
+              </select>
+            </div>
+
+            <div class="setting-group">
+              <label for="aspectRatio">Aspect Ratio</label>
+              <select id="aspectRatio">
+                <option value="1:1">Square (1:1)</option>
+                <option value="16:9">Landscape (16:9)</option>
+                <option value="9:16">Portrait (9:16)</option>
+                <option value="4:3">Classic (4:3)</option>
+                <option value="21:9">Ultrawide (21:9)</option>
+              </select>
+            </div>
+
+            <div class="setting-group">
+              <label for="qualityRange">Quality Level</label>
+              <div class="range-container">
+                <input
+                  type="range"
+                  id="qualityRange"
+                  min="1"
+                  max="10"
+                  value="7"
+                />
+                <span class="range-value" id="qualityValue">7</span>
+              </div>
+            </div>
+
+            <div class="setting-group">
+              <label for="creativityRange">Creativity</label>
+              <div class="range-container">
+                <input
+                  type="range"
+                  id="creativityRange"
+                  min="1"
+                  max="10"
+                  value="5"
+                />
+                <span class="range-value" id="creativityValue">5</span>
+              </div>
+            </div>
+
+            <div class="setting-group">
+              <label for="seedInput">Seed (Optional)</label>
+              <input
+                type="number"
+                id="seedInput"
+                placeholder="Random seed for reproducibility"
+                class="seed-input"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+          <h2>🖼️ Your Creations</h2>
+          <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery items will be populated here -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Modal for full image view -->
+    <div class="modal" id="imageModal">
+      <div class="modal-content">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img id="modalImage" src="" alt="Full size artwork" />
+        <p id="modalPrompt"></p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
