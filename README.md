@@ -24,12 +24,6 @@
 
 ---
 
-## 📸 Live Preview
-
-![ArtisanAI UI Screenshot](https://via.placeholder.com/1200x700?text=ArtisanAI+UI)
-
----
-
 ## 🧰 Tech Stack
 
 - ✅ **HTML5 + CSS3** (modern design using glassmorphism, gradients, responsive layout)
